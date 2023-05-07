@@ -1,13 +1,43 @@
-N = int(input("Ширина треугольника: "))
+# Задание 1
+text = input("Введите слово: ")
 
-for i in range(N, 0, -1):
-    print('*' * i)
+if text == text[::-1]:
+    print("+")
+else:
+    print("-")
 
-for i in range(1, N+1):
-    print('*' * i)
+# Задание 2
+text = input("Введите текст: ")
+word = input("Введите слово для поиска: ")
 
-for i in range(N, 0, -1):
-    print(' ' * (N-i) + '*' * i)
+if word in text:
+    print("YES")
+else:
+    print("NO")
 
-for i in range(1, N+1):
-    print(' ' * (N-i) + '*' * i)
+# Задание 3
+string = input("Введите строку: ")
+
+if string.startswith('abc'):
+    string = string.replace('abc', 'www', 1)
+else:
+    string += 'qqq'
+
+print(string)
+
+# Задание 4
+text = input("Ведите текст с цифрами: ")
+
+text_without_digits = ""
+for char in text:
+    if not char.isdigit():
+        text_without_digits += char
+
+print("Текст без цифр: ", text_without_digits)
+# Задание 5
+email = input("Введите электронную почту: ")
+
+if "@" in email and "." in email:
+    print("YES")
+else:
+    print("NO")
